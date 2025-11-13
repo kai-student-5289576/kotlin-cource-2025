@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#F5F5F5">
+
+    <!-- Header aligned to top -->
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Завдання 2: RelativeLayout"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="16dp"
+        android:background="#4CAF50"
+        android:textColor="#FFFFFF"
+        android:layout_alignParentTop="true"/>
+
+    <!-- Center element -->
+    <Button
+        android:id="@+id/centerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Центральна кнопка"
+        android:layout_centerInParent="true"
+        android:padding="16dp"/>
+
+    <!-- Element above center -->
+    <TextView
+        android:id="@+id/aboveCenterText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Над центром"
+        android:textSize="16sp"
+        android:padding="8dp"
+        android:background="#BBDEFB"
+        android:layout_above="@id/centerButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Element below center -->
+    <TextView
+        android:id="@+id/belowCenterText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Під центром"
+        android:textSize="16sp"
+        android:padding="8dp"
+        android:background="#C5E1A5"
+        android:layout_below="@id/centerButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Element to the left of center -->
+    <ImageButton
+        android:id="@+id/leftButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@android:drawable/ic_media_previous"
+        android:layout_toStartOf="@id/centerButton"
+        android:layout_alignTop="@id/centerButton"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="Попередня"/>
+
+    <!-- Element to the right of center -->
+    <ImageButton
+        android:id="@+id/rightButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@android:drawable/ic_media_next"
+        android:layout_toEndOf="@id/centerButton"
+        android:layout_alignTop="@id/centerButton"
+        android:layout_marginStart="16dp"
+        android:contentDescription="Наступна"/>
+
+    <!-- Top-left corner -->
+    <TextView
+        android:id="@+id/topLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Верхній лівий"
+        android:padding="8dp"
+        android:background="#FFCCBC"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/header"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Top-right corner -->
+    <TextView
+        android:id="@+id/topRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Верхній правий"
+        android:padding="8dp"
+        android:background="#F0F4C3"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/header"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Bottom-left corner -->
+    <Button
+        android:id="@+id/bottomLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Назад"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Bottom-right corner -->
+    <Button
+        android:id="@+id/bottomRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Вперед"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Element aligned to left of another element and at bottom -->
+    <TextView
+        android:id="@+id/customPosition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Відносна позиція"
+        android:padding="12dp"
+        android:background="#E1BEE7"
+        android:layout_toStartOf="@id/bottomRight"
+        android:layout_alignTop="@id/bottomRight"
+        android:layout_marginEnd="8dp"/>
+
+    <!-- Baseline alignment example -->
+    <TextView
+        android:id="@+id/baselineRef"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Базова лінія:"
+        android:textSize="18sp"
+        android:layout_below="@id/topLeft"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="24dp"/>
+
+    <EditText
+        android:id="@+id/baselineInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Введіть дані"
+        android:minWidth="150dp"
+        android:layout_toEndOf="@id/baselineRef"
+        android:layout_alignBaseline="@id/baselineRef"
+        android:layout_marginStart="8dp"/>
+
+    <!-- Complex relative positioning -->
+    <View
+        android:id="@+id/decorativeBox"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:background="#81C784"
+        android:layout_below="@id/baselineRef"
+        android:layout_toEndOf="@id/topLeft"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Декор"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:layout_alignTop="@id/decorativeBox"
+        android:layout_alignStart="@id/decorativeBox"
+        android:layout_alignEnd="@id/decorativeBox"
+        android:layout_alignBottom="@id/decorativeBox"
+        android:gravity="center"/>
+
+</RelativeLayout>
+

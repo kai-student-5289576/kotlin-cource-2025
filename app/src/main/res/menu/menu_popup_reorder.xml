@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/reorder_move_up" android:title="Move Up" />
+    <item android:id="@+id/reorder_move_down" android:title="Move Down" />
+    <item android:id="@+id/reorder_shuffle" android:title="Shuffle" />
+    <item android:id="@+id/reorder_reset" android:title="Reset" />
+</menu>
+

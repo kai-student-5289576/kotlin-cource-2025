@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#F5F5F5">
+
+    <!-- Header -->
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Завдання 4: ConstraintLayout"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="16dp"
+        android:background="#673AB7"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Left section container -->
+    <TextView
+        android:id="@+id/leftSectionTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Лівий блок"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="8dp"
+        android:background="#E3F2FD"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/rightSectionTitle"
+        app:layout_constraintWidth_percent="0.48"/>
+
+    <Button
+        android:id="@+id/leftButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Кнопка 1"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/leftSectionTitle"
+        app:layout_constraintStart_toStartOf="@id/leftSectionTitle"
+        app:layout_constraintEnd_toEndOf="@id/leftSectionTitle"/>
+
+    <EditText
+        android:id="@+id/leftInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Введіть текст"
+        android:padding="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/leftButton"
+        app:layout_constraintStart_toStartOf="@id/leftSectionTitle"
+        app:layout_constraintEnd_toEndOf="@id/leftSectionTitle"/>
+
+    <!-- Right section container -->
+    <TextView
+        android:id="@+id/rightSectionTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Правий блок"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="8dp"
+        android:background="#FFF3E0"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintStart_toEndOf="@id/leftSectionTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.48"/>
+
+    <Button
+        android:id="@+id/rightButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Кнопка 2"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/rightSectionTitle"
+        app:layout_constraintStart_toStartOf="@id/rightSectionTitle"
+        app:layout_constraintEnd_toEndOf="@id/rightSectionTitle"/>
+
+    <CheckBox
+        android:id="@+id/checkbox1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Опція 1"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/rightButton"
+        app:layout_constraintStart_toStartOf="@id/rightSectionTitle"
+        app:layout_constraintEnd_toEndOf="@id/rightSectionTitle"/>
+
+    <CheckBox
+        android:id="@+id/checkbox2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Опція 2"
+        app:layout_constraintTop_toBottomOf="@id/checkbox1"
+        app:layout_constraintStart_toStartOf="@id/rightSectionTitle"
+        app:layout_constraintEnd_toEndOf="@id/rightSectionTitle"/>
+
+    <!-- FrameLayout-like section with overlapping -->
+    <TextView
+        android:id="@+id/frameTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Накладання елементів (як FrameLayout):"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:padding="8dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/leftInput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <View
+        android:id="@+id/backgroundView"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:background="#9C27B0"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/frameTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/centeredText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Базовий шар"
+        android:textSize="24sp"
+        android:textColor="#FFFFFF"
+        android:padding="16dp"
+        android:background="#7B1FA2"
+        app:layout_constraintTop_toTopOf="@id/backgroundView"
+        app:layout_constraintBottom_toBottomOf="@id/backgroundView"
+        app:layout_constraintStart_toStartOf="@id/backgroundView"
+        app:layout_constraintEnd_toEndOf="@id/backgroundView"/>
+
+    <TextView
+        android:id="@+id/badge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NEW"
+        android:textColor="#FFFFFF"
+        android:background="#F44336"
+        android:padding="8dp"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toTopOf="@id/backgroundView"
+        app:layout_constraintEnd_toEndOf="@id/backgroundView"/>
+
+    <Button
+        android:id="@+id/actionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Дія"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toBottomOf="@id/backgroundView"
+        app:layout_constraintStart_toStartOf="@id/backgroundView"/>
+
+    <!-- Additional section -->
+    <TextView
+        android:id="@+id/additionalTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Додатковий блок"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="8dp"
+        android:background="#C8E6C9"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/backgroundView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#C8E6C9"
+        android:paddingBottom="8dp"
+        app:layout_constraintTop_toBottomOf="@id/additionalTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Варіант А"/>
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Варіант Б"/>
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Варіант В"/>
+
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

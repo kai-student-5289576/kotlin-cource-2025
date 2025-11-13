@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linear_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <TextView
+        android:id="@+id/titleLinear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lab5_linear_title"
+        android:textSize="18sp"
+        android:layout_marginBottom="8dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp"
+        style="?android:attr/buttonBarStyle">
+
+        <Button
+            android:id="@+id/btnA"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="@string/lab5_btn_a" />
+
+        <Button
+            android:id="@+id/btnB"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="@string/lab5_btn_b" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/inner_frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#EEE"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/movableTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lab5_movable"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/frame_overlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lab5_overlay"
+            android:layout_gravity="bottom|end"
+            android:padding="6dp" />
+
+    </FrameLayout>
+
+</LinearLayout>

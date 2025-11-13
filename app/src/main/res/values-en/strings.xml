@@ -3,4 +3,36 @@
     <string name="surname">Yakovenko</string>
     <string name="flag_desc">flag</string>
     <string name="coat_desc">coat</string>
+
+    <!-- Lab5 strings -->
+    <string name="lab5_linear">Linear</string>
+    <string name="lab5_relative">Relative</string>
+    <string name="lab5_constraint">Constraint</string>
+    <string name="lab5_move">Move</string>
+    <string name="lab5_constraintset">CSet</string>
+
+    <!-- Layout strings -->
+    <string name="lab5_linear_title">LinearLayout + FrameLayout</string>
+    <string name="lab5_relative_title">RelativeLayout Demo</string>
+    <string name="lab5_constraint_title">ConstraintLayout Demo</string>
+
+    <!-- Button labels -->
+    <string name="lab5_btn_a">Button A</string>
+    <string name="lab5_btn_b">Button B</string>
+    <string name="lab5_btn1">Button 1</string>
+    <string name="lab5_btn2">Button 2</string>
+    <string name="lab5_rel_click">Click Me</string>
+
+    <!-- Text labels -->
+    <string name="lab5_movable">Movable text</string>
+    <string name="lab5_overlay">Overlay</string>
+    <string name="lab5_movable_label">Movable View</string>
+    <string name="lab5_rel_info">Info text</string>
+
+    <!-- Lab 6 strings -->
+    <string name="lab6_title">Nested LinearLayouts</string>
+    <string name="lab6_left">Left</string>
+    <string name="lab6_right">Right</string>
+    <string name="lab6_background">FrameLayout background content</string>
+    <string name="lab6_overlay">Overlay</string>
 </resources>

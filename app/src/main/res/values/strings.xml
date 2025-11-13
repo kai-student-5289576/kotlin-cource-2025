@@ -1,6 +1,34 @@
 <resources>
-    <string name="app_name">kai-kotlin</string>
-    <string name="surname">Яковенко</string>
-    <string name="flag_desc">Прапор</string>
-    <string name="coat_desc">Герб</string>
+    <string name="app_name">Kaikotlin</string>
+    <string name="lab6_left">Ліва</string>
+    <string name="lab6_right">Права</string>
+    <string name="lab6_title">Lab 6: Menus Demo</string>
+    <string name="lab6_background">Background panel</string>
+    <string name="lab6_overlay">Overlay</string>
+    <string name="lab6_relative_title">Relative Layout Title</string>
+    <string name="lab6_relative_button1">Button 1</string>
+    <string name="lab6_relative_button2">Button 2</string>
+    <string name="lab6_relative_image_desc">Image Description</string>
+
+    <!-- Lab5 defaults (added to satisfy resource linking) -->
+    <string name="surname">Yakovenko</string>
+    <string name="flag_desc">flag</string>
+    <string name="coat_desc">coat</string>
+    <string name="lab5_linear">Linear</string>
+    <string name="lab5_relative">Relative</string>
+    <string name="lab5_constraint">Constraint</string>
+    <string name="lab5_move">Move</string>
+    <string name="lab5_constraintset">CSet</string>
+    <string name="lab5_linear_title">LinearLayout + FrameLayout</string>
+    <string name="lab5_relative_title">RelativeLayout Demo</string>
+    <string name="lab5_constraint_title">ConstraintLayout Demo</string>
+    <string name="lab5_btn_a">Button A</string>
+    <string name="lab5_btn_b">Button B</string>
+    <string name="lab5_btn1">Button 1</string>
+    <string name="lab5_btn2">Button 2</string>
+    <string name="lab5_rel_click">Click Me</string>
+    <string name="lab5_movable">Movable text</string>
+    <string name="lab5_overlay">Overlay</string>
+    <string name="lab5_movable_label">Movable View</string>
+    <string name="lab5_rel_info">Info text</string>
 </resources>

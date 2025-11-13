@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#F5F5F5">
+
+    <!-- Header -->
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Завдання 5: ConstraintSet"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="16dp"
+        android:background="#009688"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Control buttons -->
+    <Button
+        android:id="@+id/applyCodeButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Застосувати ConstraintSet (код)"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/resetButton"/>
+
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Скинути"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintStart_toEndOf="@id/applyCodeButton"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Section 1: Chains (Horizontal) -->
+    <TextView
+        android:id="@+id/chainsTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="1. Горизонтальний ланцюжок (Chain):"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:padding="8dp"
+        android:background="#E0F2F1"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/applyCodeButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/chainButton1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="A"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/chainsTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/chainButton2"
+        app:layout_constraintHorizontal_chainStyle="spread"/>
+
+    <Button
+        android:id="@+id/chainButton2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="B"
+        app:layout_constraintTop_toTopOf="@id/chainButton1"
+        app:layout_constraintStart_toEndOf="@id/chainButton1"
+        app:layout_constraintEnd_toStartOf="@id/chainButton3"/>
+
+    <Button
+        android:id="@+id/chainButton3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="C"
+        app:layout_constraintTop_toTopOf="@id/chainButton1"
+        app:layout_constraintStart_toEndOf="@id/chainButton2"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Section 2: Barriers -->
+    <TextView
+        android:id="@+id/barriersTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="2. Бар'єр (Barrier):"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:padding="8dp"
+        android:background="#FFF9C4"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/chainButton1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/barrierText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Короткий текст"
+        android:padding="8dp"
+        android:background="#FFEB3B"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/barriersTitle"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/barrierText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Дуже довгий текст для демонстрації"
+        android:padding="8dp"
+        android:background="#FDD835"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/barrierText1"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="end"
+        app:constraint_referenced_ids="barrierText1,barrierText2"/>
+
+    <Button
+        android:id="@+id/barrierButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Після бар'єру"
+        android:layout_marginStart="8dp"
+        app:layout_constraintTop_toTopOf="@id/barrierText1"
+        app:layout_constraintStart_toEndOf="@id/barrier"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Section 3: Groups -->
+    <TextView
+        android:id="@+id/groupsTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="3. Група (Group):"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:padding="8dp"
+        android:background="#E1BEE7"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/barrierText2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/groupButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Група 1"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/groupsTitle"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Button
+        android:id="@+id/groupButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Група 2"
+        android:layout_marginStart="8dp"
+        app:layout_constraintTop_toTopOf="@id/groupButton1"
+        app:layout_constraintStart_toEndOf="@id/groupButton1"/>
+
+    <Button
+        android:id="@+id/groupButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Група 3"
+        android:layout_marginStart="8dp"
+        app:layout_constraintTop_toTopOf="@id/groupButton1"
+        app:layout_constraintStart_toEndOf="@id/groupButton2"/>
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/buttonGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:constraint_referenced_ids="groupButton1,groupButton2,groupButton3"/>
+
+    <!-- Section 4: Circular Constraints -->
+    <TextView
+        android:id="@+id/circularTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="4. Кругові прив'язки (Circular Constraints):"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:padding="8dp"
+        android:background="#FFCCBC"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/groupButton1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Center anchor point -->
+    <View
+        android:id="@+id/centerAnchor"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:background="#FF5722"
+        android:layout_marginTop="120dp"
+        app:layout_constraintTop_toBottomOf="@id/circularTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <Button
+        android:id="@+id/circleButton1"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:text="1"
+        app:layout_constraintCircle="@id/centerAnchor"
+        app:layout_constraintCircleRadius="100dp"
+        app:layout_constraintCircleAngle="0"/>
+
+    <Button
+        android:id="@+id/circleButton2"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:text="2"
+        app:layout_constraintCircle="@id/centerAnchor"
+        app:layout_constraintCircleRadius="100dp"
+        app:layout_constraintCircleAngle="90"/>
+
+    <Button
+        android:id="@+id/circleButton3"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:text="3"
+        app:layout_constraintCircle="@id/centerAnchor"
+        app:layout_constraintCircleRadius="100dp"
+        app:layout_constraintCircleAngle="180"/>
+
+    <Button
+        android:id="@+id/circleButton4"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:text="4"
+        app:layout_constraintCircle="@id/centerAnchor"
+        app:layout_constraintCircleRadius="100dp"
+        app:layout_constraintCircleAngle="270"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

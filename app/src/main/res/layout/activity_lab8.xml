@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Toolbar for Options Menu -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="Lab 8: Menus" />
+
+    <!-- TextView that will have a context menu bound to it -->
+    <TextView
+        android:id="@+id/tvContext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Long-press here to change my color (Context Menu)"
+        android:layout_margin="16dp"
+        android:padding="12dp"
+        android:textSize="16sp"
+        android:textColor="@android:color/black" />
+
+    <!-- ListView for Contextual Action Mode (multi-select) -->
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="8dp"
+        android:choiceMode="multipleChoice" />
+
+</LinearLayout>
+

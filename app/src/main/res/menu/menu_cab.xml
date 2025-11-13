@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/cab_bold"
+        android:title="Bold"
+        android:icon="@android:drawable/ic_menu_edit"
+        android:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/cab_italic"
+        android:title="Italic"
+        android:icon="@android:drawable/ic_menu_edit"
+        android:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/cab_highlight"
+        android:title="Highlight"
+        android:icon="@android:drawable/ic_menu_gallery"
+        android:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/cab_clear"
+        android:title="Clear"
+        android:icon="@android:drawable/ic_menu_close_clear_cancel"
+        android:showAsAction="ifRoom" />
+</menu>
+
